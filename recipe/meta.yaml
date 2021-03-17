@@ -24,6 +24,9 @@ requirements:
     - msal >=1.9.0,<1.10.0
     - python-dateutil >=2.8.0
     - requests >=2.13.0
+    # listed as optional but import fails without it
+    - aiohttp >=3.4.4,<3.5.0
+    - asgiref >=3.2.3,<3.3.0
 
 test:
   imports:
