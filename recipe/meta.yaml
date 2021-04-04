@@ -1,5 +1,5 @@
 {% set name = "azure-kusto-data" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/azure-kusto-data-{{ version }}.tar.gz
-  sha256: ba8cef44ea56332942202275a01eb20ec35c89f7269dfea40b8874161b548961
+  sha256: 032f6cca71e037e434c843b9dac65dee00a4df4c8dc96085622006479857e0c6
 
 build:
   number: 0
@@ -24,9 +24,6 @@ requirements:
     - msal >=1.9.0,<1.10.0
     - python-dateutil >=2.8.0
     - requests >=2.13.0
-    # listed as optional but import fails without it
-    - aiohttp >=3.4.4,<3.5.0
-    - asgiref >=3.2.3,<3.3.0
 
 test:
   imports:
