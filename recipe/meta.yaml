@@ -1,5 +1,5 @@
 {% set name = "azure-kusto-data" %}
-{% set version = "2.1.2" %}
+{% set version = "2.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/azure-kusto-data-{{ version }}.tar.gz
-  sha256: 755045432b2bc311a532fc11b10275a38e3d8d4dd53e25cc697af8b37c7c95f7
+  sha256: 892de8f86ada0195cbf1a36e95d34062258a2061492fca56cbda49864424eaa7
 
 build:
   number: 0
