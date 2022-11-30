@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/azure-kusto-data-{{ version }}.tar.gz
   sha256: a788958ab9d3ed2c3f39b7702587a625169bf073b356101f45b9a64f1ff05b03
-  patches:
-    - 0001-add-missing-json.patch
 
 build:
   number: 0
