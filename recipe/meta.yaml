@@ -25,7 +25,7 @@ requirements:
     - azure-identity >=1.5.0,<2
     - msal >=1.9.0,<2
     - ijson >=3.1,<4.dev0
-    - azure-core >=1.11.0<2
+    - azure-core >=1.11.0,<2
 
 test:
   imports:
