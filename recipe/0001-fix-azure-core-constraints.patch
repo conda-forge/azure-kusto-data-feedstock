@@ -1,0 +1,23 @@
+diff -ruN azure-kusto-data-4.1.0/azure_kusto_data.egg-info/requires.txt azure-kusto-data-4.1.0-patch/azure_kusto_data.egg-info/requires.txt
+--- azure-kusto-data-4.1.0/azure_kusto_data.egg-info/requires.txt	2023-02-09 05:04:06.000000000 -0700
++++ azure-kusto-data-4.1.0-patch/azure_kusto_data.egg-info/requires.txt	2023-02-09 19:18:25.020336521 -0700
+@@ -3,7 +3,7 @@
+ azure-identity<2,>=1.5.0
+ msal<2,>=1.9.0
+ ijson~=3.1
+-azure-core>=1.11.0<2
++azure-core>=1.11.0,<2
+ 
+ [aio]
+ aiohttp<4,>=3.4.4
+diff -ruN azure-kusto-data-4.1.0/setup.py azure-kusto-data-4.1.0-patch/setup.py
+--- azure-kusto-data-4.1.0/setup.py	2023-02-09 05:03:58.000000000 -0700
++++ azure-kusto-data-4.1.0-patch/setup.py	2023-02-09 19:08:32.855120318 -0700
+@@ -45,6 +45,6 @@
+     packages=find_packages(exclude=["azure", "tests"]),
+     package_data={"": ["wellKnownKustoEndpoints.json"]},
+     include_package_data=True,
+-    install_requires=["python-dateutil>=2.8.0", "requests>=2.13.0", "azure-identity>=1.5.0,<2", "msal>=1.9.0,<2", "ijson~=3.1", "azure-core>=1.11.0<2"],
++    install_requires=["python-dateutil>=2.8.0", "requests>=2.13.0", "azure-identity>=1.5.0,<2", "msal>=1.9.0,<2", "ijson~=3.1", "azure-core>=1.11.0,<2"],
+     extras_require={"pandas": ["pandas"], "aio": ["aiohttp>=3.4.4,<4", "asgiref>=3.2.3,<4"]},
+ )
