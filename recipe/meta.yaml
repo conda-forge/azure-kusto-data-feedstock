@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/azure-kusto-data-{{ version }}.tar.gz
   sha256: e6af9c3d573c224f75ab41c13b7d5948746b132861711781a371b86092c2cc29
-  patches:
-    - 0001-fix-azure-core-constraints.patch
 
 build:
   number: 0
