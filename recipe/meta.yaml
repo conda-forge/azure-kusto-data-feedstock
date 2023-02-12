@@ -1,5 +1,5 @@
 {% set name = "azure-kusto-data" %}
-{% set version = "4.1.0" %}
+{% set version = "4.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/azure-kusto-data-{{ version }}.tar.gz
-  sha256: c4ae0a8b12a7aa646318a79d39e2a2322d0be83841cc8867f44da6cac3e8387e
-  patches:
-    - 0001-fix-azure-core-constraints.patch
+  sha256: e6af9c3d573c224f75ab41c13b7d5948746b132861711781a371b86092c2cc29
 
 build:
   number: 0
