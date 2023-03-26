@@ -1,11 +1,11 @@
-About azure-kusto-data
-======================
+About azure-kusto-data-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/azure-kusto-data-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Azure/azure-kusto-python
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/azure-kusto-data-feedstock/blob/main/LICENSE.txt)
 
 Summary: Kusto Data Client
 
