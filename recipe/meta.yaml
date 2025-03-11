@@ -22,7 +22,8 @@ requirements:
   run:
     - python >={{ python_min }}
     - python-dateutil >=2.8.0
-    - requests ==2.32.0
+    # requests 2.32.0 was not built on conda-forge
+    - requests ==2.32.1
     - azure-identity >=1.6.1,<2
     - msal >=1.9.0,<2
     - ijson >=3.1,<4.dev0
