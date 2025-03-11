@@ -1,5 +1,5 @@
 {% set name = "azure-kusto-data" %}
-{% set version = "4.6.3" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/azure-kusto-data-{{ version }}.tar.gz
-  sha256: 0a00c62c594decd68b14d69fd394f0008136c6ce512ee375f9c73e7a0c90a34d
+  sha256: 1aedf133d885d63990d493f87d96a767ed1fab97c63d3da60848151f3032abcc
 
 build:
   number: 0
@@ -22,8 +22,8 @@ requirements:
   run:
     - python >={{ python_min }}
     - python-dateutil >=2.8.0
-    - requests >=2.13.0
-    - azure-identity >=1.5.0,<2
+    - requests ==2.32.0
+    - azure-identity >=1.6.1,<2
     - msal >=1.9.0,<2
     - ijson >=3.1,<4.dev0
     - azure-core >=1.11.0,<2
