@@ -17,7 +17,6 @@ Kusto Python Client Library provides the capability to query Kusto clusters
 using Python. It is Python 3.x compatible and supports all data types
 through familiar Python DB API interface.
 
-
 Current build status
 ====================
 
