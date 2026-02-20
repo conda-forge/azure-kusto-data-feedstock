@@ -1,0 +1,61 @@
+schema_version: 1
+
+context:
+  name: azure-kusto-data
+  version: 6.0.2
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: e99ca60e9518a8bd41e947b53f5bb727ec2f08ce6f1c58cba200db5b9ad6f3ce
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - uv-build >=0.8.9,<0.9.0
+  run:
+    - python >=${{ python_min }}
+    - python-dateutil >=2.9.0
+    - requests >=2.32.4
+    - azure-identity >=1.24.0,<2
+    - msal >=1.34.0b1,<2
+    - ijson >=3.4.0,<3.5.dev0
+    - azure-core >=1.35.0,<2
+
+tests:
+  - python:
+      imports:
+        - azure.kusto
+        - azure.kusto.data
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+
+about:
+  summary: Kusto Data Client
+  description: |
+    Kusto Python Client Library provides the capability to query Kusto clusters
+    using Python. It is Python 3.x compatible and supports all data types
+    through familiar Python DB API interface.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/Azure/azure-kusto-python
+  repository: https://github.com/Azure/azure-kusto-python
+  documentation: https://github.com/Azure/azure-kusto-python
+
+extra:
+  recipe-maintainers:
+    - xylar
