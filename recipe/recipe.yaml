@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: azure-kusto-data
-  version: 6.0.4
+  version: "6.0.5"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 409e2e14aec6dfbedc9d5bb03e1440dabbc252b10fd03437bc523f29dbda4710
+  sha256: 385982a43e77ef7971b38a4770cdc489775a62475dcde798a0abccbaa493d208
 
 build:
   number: 0
